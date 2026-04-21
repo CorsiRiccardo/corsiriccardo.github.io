@@ -26,8 +26,8 @@ run quality checks, and verify the live GitHub Pages deployment.
   4. All asset filenames are lowercase; the site loads without 404s on a case-sensitive server (GitHub Pages)
 **Plans**: 4 plans
 Plans:
-- [ ] 01-01-PLAN.md — CSS design system (tokens, reset, base, layout, components, animations)
-- [ ] 01-02-PLAN.md — Asset generation (fonts WOFF2, paper texture, OG image, favicons)
+- [x] 01-01-PLAN.md — CSS design system (tokens, reset, base, layout, components, animations)
+- [x] 01-02-PLAN.md — Asset generation (fonts WOFF2, paper texture, OG image, favicons)
 - [ ] 01-03-PLAN.md — index.html semantic shell + js/nav.js Intersection Observer
 - [ ] 01-04-PLAN.md — Browser verification and requirement sign-off
 **UI hint**: yes
@@ -59,6 +59,6 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Shell | 0/4 | Not started | - |
+| 1. Foundation & Shell | 2/4 | In progress | - |
 | 2. Core Content | 0/? | Not started | - |
 | 3. Polish & Ship | 0/? | Not started | - |

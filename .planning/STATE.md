@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-04-21)
 ## Current Position
 
 Phase: 1 of 3 (Foundation & Shell)
-Plan: 0 of ? in current phase
-Status: Ready to plan
-Last activity: 2026-04-21 — Roadmap created (3 phases, 20 requirements mapped)
+Plan: 2 of 4 in current phase
+Status: Executing — Wave 1 complete, Wave 2 next
+Last activity: 2026-04-21 — Plans 01-01 (CSS design system) and 01-02 (assets) complete
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██░░░░░░░░] 17%
 
 ## Performance Metrics
 
@@ -52,9 +52,12 @@ None yet.
 
 ### Blockers/Concerns
 
-- Exact WOFF2 subset size after Latin-only subsetting (estimate 40-80 KB; confirm in Phase 1)
-- PNG noise tile generation method not yet decided (Figma export, ImageMagick, or pre-made tile)
 - Project count to feature: PROJECT.md says 1-3; research recommends minimum 3-4 for credibility — resolve before Phase 2 content writing
+
+### Resolved (Phase 1 Research)
+
+- WOFF2 subset size: ~67KB total (CG-400 ≈22.9KB, CG-600 ≈23.4KB, Lora-400 ≈21.1KB) — Latin-only subset from Google Fonts gstatic CDN, committed to assets/fonts/
+- PNG noise tile: generated via pure Node.js script (no ImageMagick needed) — raw PNG encoder, 200×200px grayscale noise, tileable
 
 ## Deferred Items
 
@@ -65,5 +68,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-21
-Stopped at: Roadmap written; ready to run /gsd-plan-phase 1
-Resume file: None
+Stopped at: Phase 1 planned (4 plans, 3 waves); ready to run /gsd-execute-phase 1
+Resume file: .planning/phases/01-foundation-shell/
