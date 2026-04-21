@@ -24,7 +24,12 @@ run quality checks, and verify the live GitHub Pages deployment.
   2. Sticky navigation renders at all viewport widths with no horizontal scrollbar; scrolling to any section highlights the corresponding nav link
   3. Sharing the page URL on a Slack/LinkedIn preview renders the correct OG title, description, and image
   4. All asset filenames are lowercase; the site loads without 404s on a case-sensitive server (GitHub Pages)
-**Plans**: TBD
+**Plans**: 4 plans
+Plans:
+- [ ] 01-01-PLAN.md — CSS design system (tokens, reset, base, layout, components, animations)
+- [ ] 01-02-PLAN.md — Asset generation (fonts WOFF2, paper texture, OG image, favicons)
+- [ ] 01-03-PLAN.md — index.html semantic shell + js/nav.js Intersection Observer
+- [ ] 01-04-PLAN.md — Browser verification and requirement sign-off
 **UI hint**: yes
 
 ### Phase 2: Core Content
@@ -54,6 +59,6 @@ run quality checks, and verify the live GitHub Pages deployment.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Shell | 0/? | Not started | - |
+| 1. Foundation & Shell | 0/4 | Not started | - |
 | 2. Core Content | 0/? | Not started | - |
 | 3. Polish & Ship | 0/? | Not started | - |
