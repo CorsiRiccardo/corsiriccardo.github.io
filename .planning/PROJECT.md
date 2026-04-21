@@ -20,9 +20,9 @@ A visitor should understand who Riccardo is as a developer and what he's built w
 
 - [ ] Hero section with professional intro (name, title, brief tagline)
 - [ ] About section: professional focus only — stack, what he does, no personal fluff
-- [ ] Projects section showcasing web apps and CLI tools/libraries with GitHub links
-- [ ] Work experience timeline, clean and readable
-- [ ] Contact section with email and LinkedIn
+- [ ] Projects section: 1-3 projects (web apps + CLI tools), card-only layout with text + tech tags + GitHub link (no screenshots available at launch)
+- [ ] Work experience timeline extracted from CV — compact, readable, embedded in page
+- [ ] Contact section with email and LinkedIn links (no CV PDF download — sent separately)
 - [ ] "Carta invecchiata" visual style — warm cream/ivory tones, subtle paper texture, strong typography hierarchy
 - [ ] Scroll reveal animations (elements appear gently on scroll)
 - [ ] Hover effects on cards and interactive elements — always subtle
