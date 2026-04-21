@@ -1,0 +1,125 @@
+@layer components {
+  /* Skip-to-content link — keyboard accessibility */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--space-md);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    padding: var(--space-sm) var(--space-md);
+    text-decoration: none;
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-label);
+    z-index: calc(var(--z-nav) + 1);
+    border-radius: 2px;
+    transition: top 200ms ease;
+  }
+
+  .skip-link:focus {
+    top: var(--space-sm);
+  }
+
+  /* Sticky navigation */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-nav);
+  }
+
+  nav {
+    height: var(--nav-height); /* 64px */
+    background-color: rgba(237, 232, 223, 0.95);
+    background-color: color-mix(in srgb, var(--color-bg-secondary) 95%, transparent);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--space-lg);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-text-primary) 10%, transparent);
+  }
+
+  nav ul {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  /* Nav links use label size (14px, Lora 400) */
+  .nav-link {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    padding-block: var(--space-sm);
+    border-bottom: 2px solid transparent;
+    transition: border-color 200ms ease, color 200ms ease;
+    /* Touch target minimum 44px height via padding */
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link:hover {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+  }
+
+  /* Active state toggled by Intersection Observer in js/nav.js */
+  .nav-link--active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+  }
+
+  /* Hamburger button — hidden on desktop, visible below 640px */
+  .nav__hamburger {
+    display: none;
+    color: var(--color-text-primary);
+    padding: var(--space-sm);
+    /* Touch target */
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobile nav — hamburger and collapsed menu */
+  @media (max-width: 639px) {
+    .nav__hamburger {
+      display: flex;
+    }
+
+    nav ul {
+      display: none;
+      position: absolute;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      background-color: var(--color-bg-secondary);
+      flex-direction: column;
+      gap: 0;
+      padding-block: var(--space-sm);
+      border-bottom: 1px solid color-mix(in srgb, var(--color-text-primary) 10%, transparent);
+      /* Ensure mobile menu renders above texture overlay */
+      z-index: calc(var(--z-nav) - 1);
+    }
+
+    nav.nav--open ul {
+      display: flex;
+    }
+
+    .nav-link {
+      padding: var(--space-md) var(--space-lg);
+      width: 100%;
+      min-height: 44px;
+      border-bottom: none;
+    }
+
+    .nav-link--active {
+      color: var(--color-accent);
+      background-color: color-mix(in srgb, var(--color-accent) 8%, transparent);
+      border-bottom: none;
+    }
+  }
+}
