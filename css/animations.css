@@ -1,0 +1,7 @@
+@layer animations {
+  /* Phase 3 — scroll reveal and hover transitions go here */
+
+  @media (prefers-reduced-motion: reduce) {
+    /* All animation overrides go here in Phase 3 */
+  }
+}
