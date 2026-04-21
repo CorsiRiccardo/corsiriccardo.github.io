@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-04-21)
 
 **Core value:** A visitor understands who Riccardo is as a developer and what he has built within 10 seconds of landing.
-**Current focus:** Phase 1 — Foundation & Shell
+**Current focus:** Phase 2 — Core Content
 
 ## Current Position
 
-Phase: 1 of 3 (Foundation & Shell)
-Plan: 4 of 4 in current phase
-Status: Phase 1 Complete
-Last activity: 2026-04-21 — Phase 1 Foundation & Shell complete; all 10 requirements verified
+Phase: 2 of 3 (Core Content)
+Plan: 0 of TBD in current phase
+Status: Phase 2 UI-SPEC approved — ready to plan
+Last activity: 2026-04-21 — Phase 2 UI design contract approved (6/6 dimensions pass)
 
 Progress: [███░░░░░░░] 33%
 
@@ -68,5 +68,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-21
-Stopped at: Phase 1 planned (4 plans, 3 waves); ready to run /gsd-execute-phase 1
-Resume file: .planning/phases/01-foundation-shell/
+Stopped at: Phase 2 UI-SPEC approved; ready to run /gsd-plan-phase 2
+Resume file: .planning/phases/02-core-content/02-UI-SPEC.md
