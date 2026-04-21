@@ -20,8 +20,8 @@
     --space-4xl: 96px;
 
     /* Typography */
-    --font-family-display: 'Cormorant Garamond', Georgia, serif;
-    --font-family-body:    'Lora', 'Times New Roman', serif;
+    --font-family-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-family-body:    'Inter', system-ui, sans-serif;
 
     --font-size-label:   0.875rem;
     --font-size-body:    1rem;
