@@ -4,19 +4,19 @@
 
 ### Foundation (FOUND)
 
-- [ ] **FOUND-01**: CSS design token system established as custom properties (`tokens.css`) — colors, spacing, type scale, carta invecchiata palette (cream/ivory #F5F0E8 range)
-- [ ] **FOUND-02**: Cormorant Garamond (display/headings) + Lora (body) fonts self-hosted as WOFF2 with `font-display: swap` — eliminates Google Fonts render-blocking and tracking
-- [ ] **FOUND-03**: Paper texture implemented as a static pre-rendered PNG noise tile on `body::before` (`position: fixed`, `z-index: 9999`, `pointer-events: none`, `opacity ~0.035`) — not live SVG feTurbulence
-- [ ] **FOUND-04**: WCAG AA contrast (4.5:1 minimum) verified for all body text on the warm cream + texture background
-- [ ] **FOUND-05**: CSS `@layer` architecture: `tokens → reset → base → layout → components → animations`
+- [x] **FOUND-01**: CSS design token system established as custom properties (`tokens.css`) — colors, spacing, type scale, carta invecchiata palette (cream/ivory #F5F0E8 range)
+- [x] **FOUND-02**: Cormorant Garamond (display/headings) + Lora (body) fonts self-hosted as WOFF2 with `font-display: swap` — eliminates Google Fonts render-blocking and tracking
+- [x] **FOUND-03**: Paper texture implemented as a static pre-rendered PNG noise tile on `body::before` (`position: fixed`, `z-index: 9999`, `pointer-events: none`, `opacity ~0.035`) — not live SVG feTurbulence
+- [x] **FOUND-04**: WCAG AA contrast (4.5:1 minimum) verified for all body text on the warm cream + texture background
+- [x] **FOUND-05**: CSS `@layer` architecture: `tokens → reset → base → layout → components → animations`
 
 ### Layout & Shell (LAYOUT)
 
-- [ ] **LAYOUT-01**: Single `index.html` with semantic HTML5 structure (`<header>`, `<main>`, `<section>`, `<footer>`, `<nav>`)
-- [ ] **LAYOUT-02**: Sticky top navigation with smooth scroll to all page sections; active section highlighted via second Intersection Observer
-- [ ] **LAYOUT-03**: Fully responsive layout, mobile-first, no horizontal scroll at any viewport width
-- [ ] **LAYOUT-04**: All asset filenames lowercase (GitHub Pages runs Linux — case mismatch causes 404 in production)
-- [ ] **LAYOUT-05**: Open Graph meta tags (`og:title`, `og:description`, `og:image`, `og:url`) and responsive viewport meta
+- [x] **LAYOUT-01**: Single `index.html` with semantic HTML5 structure (`<header>`, `<main>`, `<section>`, `<footer>`, `<nav>`)
+- [x] **LAYOUT-02**: Sticky top navigation with smooth scroll to all page sections; active section highlighted via second Intersection Observer
+- [x] **LAYOUT-03**: Fully responsive layout, mobile-first, no horizontal scroll at any viewport width
+- [x] **LAYOUT-04**: All asset filenames lowercase (GitHub Pages runs Linux — case mismatch causes 404 in production)
+- [x] **LAYOUT-05**: Open Graph meta tags (`og:title`, `og:description`, `og:image`, `og:url`) and responsive viewport meta
 
 ### Hero (HERO)
 
@@ -74,16 +74,16 @@
 
 | REQ-ID | Phase | Status |
 |--------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
-| FOUND-02 | Phase 1 | Pending |
-| FOUND-03 | Phase 1 | Pending |
-| FOUND-04 | Phase 1 | Pending |
-| FOUND-05 | Phase 1 | Pending |
-| LAYOUT-01 | Phase 1 | Pending |
-| LAYOUT-02 | Phase 1 | Pending |
-| LAYOUT-03 | Phase 1 | Pending |
-| LAYOUT-04 | Phase 1 | Pending |
-| LAYOUT-05 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
+| FOUND-02 | Phase 1 | Complete |
+| FOUND-03 | Phase 1 | Complete |
+| FOUND-04 | Phase 1 | Complete |
+| FOUND-05 | Phase 1 | Complete |
+| LAYOUT-01 | Phase 1 | Complete |
+| LAYOUT-02 | Phase 1 | Complete |
+| LAYOUT-03 | Phase 1 | Complete |
+| LAYOUT-04 | Phase 1 | Complete |
+| LAYOUT-05 | Phase 1 | Complete |
 | HERO-01 | Phase 2 | Pending |
 | HERO-02 | Phase 2 | Pending |
 | PROJ-01 | Phase 2 | Pending |
