@@ -72,15 +72,26 @@
 
 ## Traceability
 
-*(Filled by roadmapper)*
-
-| REQ-ID | Phase |
-|--------|-------|
-| FOUND-01–05 | — |
-| LAYOUT-01–05 | — |
-| HERO-01–02 | — |
-| PROJ-01–03 | — |
-| ABOUT-01 | — |
-| TIME-01 | — |
-| CONTACT-01 | — |
-| ANIM-01–03 | — |
+| REQ-ID | Phase | Status |
+|--------|-------|--------|
+| FOUND-01 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Pending |
+| LAYOUT-01 | Phase 1 | Pending |
+| LAYOUT-02 | Phase 1 | Pending |
+| LAYOUT-03 | Phase 1 | Pending |
+| LAYOUT-04 | Phase 1 | Pending |
+| LAYOUT-05 | Phase 1 | Pending |
+| HERO-01 | Phase 2 | Pending |
+| HERO-02 | Phase 2 | Pending |
+| PROJ-01 | Phase 2 | Pending |
+| PROJ-02 | Phase 2 | Pending |
+| PROJ-03 | Phase 2 | Pending |
+| ABOUT-01 | Phase 2 | Pending |
+| TIME-01 | Phase 2 | Pending |
+| CONTACT-01 | Phase 2 | Pending |
+| ANIM-01 | Phase 3 | Pending |
+| ANIM-02 | Phase 3 | Pending |
+| ANIM-03 | Phase 3 | Pending |
