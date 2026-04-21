@@ -1,10 +1,11 @@
 ---
 phase: 1
 slug: foundation-shell
-status: draft
+status: approved
 shadcn_initialized: false
 preset: none
 created: 2026-04-21
+reviewed_at: 2026-04-21
 ---
 
 # Phase 1 — UI Design Contract
@@ -26,7 +27,7 @@ created: 2026-04-21
 | Component library| none                                                               |
 | Icon library     | Inline SVG only (Heroicons / Feather subset — no CDN dependency)  |
 | Font (display)   | Cormorant Garamond 400, 600 — self-hosted WOFF2, Latin subset      |
-| Font (body)      | Lora 400, 500 — self-hosted WOFF2, Latin subset                   |
+| Font (body)      | Lora 400 — self-hosted WOFF2, Latin subset                        |
 
 Source: REQUIREMENTS.md FOUND-02, research SUMMARY.md Key Stack Decisions.
 
@@ -45,7 +46,7 @@ Declared values (multiples of 4 — 8-point base scale):
 | xl    | 32px  | Section inner padding (mobile)             |
 | 2xl   | 48px  | Section inner padding (tablet+)            |
 | 3xl   | 64px  | Between major page sections (desktop)      |
-| 4xl   | 96px  | Vertical breathing room between sections (wide) |
+| 4xl   | 96px  | Vertical breathing room between sections (wide) — extended token, intentional; wide-viewport section gaps only, not part of the core 8-point sequence |
 
 Exceptions:
 - Touch targets for nav links: minimum 44px height (WCAG 2.5.5 AAA, applied as min-height/padding, not a spacing token)
@@ -60,11 +61,13 @@ All sizes in `rem` with `px` reference. Base: `1rem = 16px` (browser default, no
 | Role    | Size         | Weight        | Line Height | Font              | Usage                             |
 |---------|--------------|---------------|-------------|-------------------|-----------------------------------|
 | Body    | 1rem (16px)  | 400 (regular) | 1.6         | Lora              | Paragraphs, nav labels, meta copy |
-| Label   | 0.875rem (14px) | 500 (medium) | 1.4        | Lora              | Tech tags, captions, footer text  |
+| Label   | 0.875rem (14px) | 400 (regular) | 1.4        | Lora              | Tech tags, captions, footer text  |
 | Heading | 1.5rem (24px) | 600 (semibold) | 1.3        | Cormorant Garamond | Section headings (h2)             |
 | Display | 3rem (48px)  | 400 (regular) | 1.1         | Cormorant Garamond | Page-level display (h1, hero name) |
 
 Notes:
+- Exactly 2 distinct weight values: 400 (Lora regular + Cormorant regular) and 600 (Cormorant semibold for h2 headings)
+- Body and Label are distinguished by size (16px vs 14px) and color (text-primary `#2C2416` vs text-secondary `#6B5D4F`) — a third weight is not needed
 - Cormorant Garamond at weight 400 already reads as a strong display face — semibold is reserved for h2 only, not h1
 - Body line-height 1.6 chosen over 1.5 because Lora's calligraphic letterforms benefit from extra leading
 - Display size 48px is the Phase 1 token declaration; exact hero usage is Phase 2 scope
@@ -156,7 +159,7 @@ Semantic structure for `index.html` (LAYOUT-01):
 </html>
 ```
 
-Phase 1 renders all sections as empty placeholders — the shell validates the layout and font loading without requiring content.
+Phase 1 renders all sections as empty placeholders — the shell validates the layout and font loading without requiring content. The `<h1>` inside `#hero` (48px Cormorant Garamond 400, Display role) is the designated primary visual anchor for Phase 2 layout hierarchy.
 
 ---
 
@@ -232,10 +235,10 @@ Applies to FOUND-02 implementation:
 | Font                   | Weights to load | File convention               | `<link rel="preload">` |
 |------------------------|-----------------|-------------------------------|-------------------------|
 | Cormorant Garamond     | 400, 600        | `cormorant-garamond-400.woff2`, `cormorant-garamond-600.woff2` | Yes — both weights preloaded |
-| Lora                   | 400, 500        | `lora-400.woff2`, `lora-500.woff2` | Yes — 400 weight preloaded; 500 deferred |
+| Lora                   | 400             | `lora-400.woff2`              | Yes — preloaded          |
 
 All font files stored at: `assets/fonts/` (lowercase path, per LAYOUT-04).
-Latin subset only — reduces file size from ~150KB to estimated 40–80KB total for all four files.
+Latin subset only — reduces file size from ~150KB to estimated 30–60KB total for all three files.
 `unicode-range: U+0000-00FF` declared in each `@font-face` block.
 
 ---
@@ -294,7 +297,6 @@ The following files must exist and pass browser verification before Phase 2 begi
 - [ ] `assets/fonts/cormorant-garamond-400.woff2`
 - [ ] `assets/fonts/cormorant-garamond-600.woff2`
 - [ ] `assets/fonts/lora-400.woff2`
-- [ ] `assets/fonts/lora-500.woff2`
 - [ ] `assets/textures/paper-grain.png`
 - [ ] `assets/og-image.png` (1200×630px)
 - [ ] `assets/favicon.ico` + `assets/favicon.svg`
