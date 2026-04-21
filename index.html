@@ -1,123 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="src/styles.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/db36bd79b8.js" crossorigin="anonymous"></script>
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Software developer specialising in game systems and backend tools. View my projects and experience.">
+
+  <!-- Open Graph — all values are exact; og:image MUST be absolute URL -->
+  <meta property="og:title" content="Riccardo Corsi — Software Developer">
+  <meta property="og:description" content="Software developer specialising in game systems and backend tools. View my projects and experience.">
+  <meta property="og:image" content="https://corsiriccardo.github.io/assets/og-image.png">
+  <meta property="og:url" content="https://corsiriccardo.github.io">
+  <meta property="og:type" content="website">
+
+  <title>Riccardo Corsi — Software Developer</title>
+
+  <!-- Font preloads — MUST appear before CSS links to prevent double fetch.
+       crossorigin attribute is required even for same-origin fonts (browser CORS behavior). -->
+  <link rel="preload" href="assets/fonts/cormorant-garamond-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/lora-400.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- CSS — linked in @layer declaration order from tokens.css -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicons — SVG for modern browsers, ICO fallback for old browsers -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
+  <!-- Skip link: first element in body for keyboard navigation accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<section class="hero">
-    <nav>
-        <img class="logo" src="src/images/howl.png" alt="Logo">
-        <ul class="nav-ul" id="nav-list">
-            <li><a href="#about-me">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact-me">Contacts</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#timeline" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect y="4" width="24" height="2" fill="currentColor"/>
+          <rect y="11" width="24" height="2" fill="currentColor"/>
+          <rect y="18" width="24" height="2" fill="currentColor"/>
+        </svg>
+      </button>
     </nav>
-    <!--<audio class="background-music" controls autoplay loop>
-        <source src="src/sounds/lofi.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>-->
-    <div class="hero-area">
-        <div class="hero-text">
-            <img class="headshot" src="src/images/me.jpg" alt="my headshot">
-            <h1>Riccardo Corsi</h1>
-            <p>Game Programmer</p>
-            <div class="button"><a href="#about-me">About me</a></div>
-        </div>
+  </header>
 
-        <div class="socials">
-            <div>
-            <a href="https://www.linkedin.com/in/riccardo-corsi-691194188/" class="social">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="80" height="80" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a></div>
-            <div>
-            <a href="https://github.com/CorsiRiccardo" class="social">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="80" height="80" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a></div>
-        </div>
-    </div>
+  <main id="main-content">
+    <section id="hero" aria-label="Introduction">
+      <!-- Phase 2 content: hero name, title, tagline, CTA -->
+    </section>
 
+    <section id="projects" aria-label="Projects">
+      <!-- Phase 2 content: project cards loaded from data/projects.json -->
+    </section>
 
-</section>
-<section class="sub-section" id="skills">
-    <div class="skills-panel">
-        <h2>Skills</h2>
-        <hr>
-        <ul class="skill-list">
-            <li>Unreal Engine 4/5</li>
-            <li>C++</li>
-            <li>Perforce</li>
-            <li>GIT</li>
-        </ul>
-    </div>
-</section>
-<section class="sub-section" id="about-me">
-    <div class="information">
-        <h2>Experience</h2>
-        <p>
-            <div class="experience-card">
-                <img class="experience-image" src="src/images/sg.jpg" alt="stormind games">
-                
-            </div>
-            <div class="experience-card">
-                <img class="experience-image" src="src/images/untold_games_logo.jpeg" alt="untold games">
-               
-            </p>
-    </div>
-</section>
-<section class="sub-section-alternative" id="projects">
-    <h2>Projects</h2>
-    <div class="project-container">
-        <div class="project-card">
-            <img class="project-image" src="src/images/frequency.png" alt="frequencify">
-            <h3>Frequencify</h3>
-            <p class="subtext">"A track analyzing tool to audio-responsive enhance the environment"</p>
-            <video autoplay muted loop id="myVideo" class="video">
-                <source src="src/videos/1.mkv">
-            </video>
-            <hr>
+    <section id="about" aria-label="About">
+      <!-- Phase 2 content: about copy, stack -->
+    </section>
 
-            <p class="subtext"><a class="project-link" href="https://github.com/CorsiRiccardo/Frequencify">View here</a></p>
+    <section id="timeline" aria-label="Work experience">
+      <!-- Phase 2 content: timeline entries -->
+    </section>
 
-        </div>
-        <div class="project-card">
-            <img class="project-image" src="src/images/ww_def.jpg" alt="wordwar">
-            <h3>WordWar</h3>
-            <p class="subtext">"A party game with direct conflict in which the players have to make
-                words in order to score points, fighting for the syllables."</p>
-            <hr>
-            <p class="subtext"><a class="project-link" href="https://www.youtube.com/watch?v=LYUY5ZBzq3o">View here</a></p>
-        </div>
-        <div class="project-card">
-            <img class="project-image" src="src/images/lis.jpg" alt="wordwar">
-            <h3>Lost in Space</h3>
-            <p class="subtext">"Lost in Space is an old school horror game."</p>
-            <hr>
-            <p class="subtext"><a class="project-link" href="https://teamrevival.itch.io/lost-in-space">View here</a></p>
-        </div>
-        <div class="project-card">
-            <img class="project-image" src="src/images/bj.png" alt="wordwar">
-            <h3>Bandit Jump</h3>
-            <p class="subtext">"Bandit Jump is a classic style arcade mobile game."</p>
-            <hr>
-            <p class="subtext"><a class="project-link" href="https://play.google.com/store/apps/details?id=com.K8.BanditJump&hl=it&gl=US">View here</a></p>
-        </div>
-    </div>
-</section>
-<footer id="contact-me">
-    <h2>Contact Me</h2>
-    <p>riccardocorsi.developer@gmail.com</p>
-</footer>
-<script src="src/app.js"></script>
+    <section id="contact" aria-label="Contact">
+      <!-- Phase 2 content: email and LinkedIn CTAs -->
+    </section>
+  </main>
+
+  <footer>
+    <!-- Phase 2 content: footer copy -->
+  </footer>
+
+  <!-- nav.js must be type="module" — uses ES module syntax (import/export not used here
+       but module semantics apply: deferred execution, strict mode, no global leak) -->
+  <script type="module" src="js/nav.js"></script>
 </body>
 </html>
