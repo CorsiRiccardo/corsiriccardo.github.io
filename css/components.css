@@ -219,4 +219,99 @@
       transform: none;
     }
   }
+
+  /* ===== Phase 2: Pill (shared — about stack + project card tech tags) ===== */
+  .pill {
+    display: inline-block;
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-label);
+    color: var(--color-text-secondary);
+    /* rgba() fallback before color-mix() */
+    background-color: rgba(44, 36, 22, 0.08);
+    background-color: color-mix(in srgb, var(--color-text-primary) 8%, transparent);
+    /* rgba() fallback before color-mix() */
+    border: 1px solid rgba(44, 36, 22, 0.15);
+    border: 1px solid color-mix(in srgb, var(--color-text-primary) 15%, transparent);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 2px;
+  }
+
+  /* ===== Phase 2: About ===== */
+  #about h2 {
+    margin-bottom: var(--space-xl);
+  }
+
+  /* Single column on mobile; prose left + stack right on wide screens */
+  .about__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 1024px) {
+    .about__content {
+      grid-template-columns: 3fr 2fr;
+      gap: var(--space-3xl);
+    }
+  }
+
+  .about__prose {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    color: var(--color-text-primary);
+    max-width: 65ch;
+    margin: 0;
+  }
+
+  /* Definition list: Labels column + pills column */
+  .about__stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin: 0;
+  }
+
+  .about__stack-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+
+  @media (min-width: 768px) {
+    .about__stack-group {
+      grid-template-columns: 100px 1fr;
+      align-items: start;
+      gap: var(--space-md);
+    }
+  }
+
+  /* Label styling: uppercase small caps, secondary color */
+  .about__stack-group dt {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-label);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding-top: var(--space-xs);
+  }
+
+  .about__stack-group dd {
+    margin: 0;
+  }
+
+  /* Pill list: flex row, wraps, no list markers */
+  .about__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
