@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Software developer specialising in game systems and backend tools. View my projects and experience.">
+  <meta name="description" content="Game Programmer with 4+ years of experience in Unreal Engine — AI systems, developer tooling, and pipeline automation. Shipped It Takes Two, Assetto Corsa Competizione, and City 20.">
 
   <!-- Open Graph — all values are exact; og:image MUST be absolute URL -->
   <meta property="og:title" content="Riccardo Corsi — Software Developer">
-  <meta property="og:description" content="Software developer specialising in game systems and backend tools. View my projects and experience.">
+  <meta property="og:description" content="Game Programmer with 4+ years of experience in Unreal Engine — AI systems, developer tooling, and pipeline automation. Shipped It Takes Two, Assetto Corsa Competizione, and City 20.">
   <meta property="og:image" content="https://corsiriccardo.github.io/assets/og-image.png">
   <meta property="og:url" content="https://corsiriccardo.github.io">
   <meta property="og:type" content="website">
@@ -57,8 +57,8 @@
   <main id="main-content">
     <section id="hero" aria-label="Introduction">
       <h1>Riccardo Corsi</h1>
-      <p class="hero__subtitle">Software Developer</p>
-      <p class="hero__tagline">I build game systems and backend tools engineered to ship, scale, and stay fast.</p>
+      <p class="hero__subtitle">Game Programmer &amp; Tools Developer</p>
+      <p class="hero__tagline">4+ years building AI systems, developer tooling, and pipeline automation for commercial titles in Unreal Engine.</p>
       <a href="#projects" class="btn btn--primary">View my work ↓</a>
     </section>
 
@@ -72,7 +72,7 @@
     <section id="about" aria-label="About">
       <h2 data-reveal>About</h2>
       <div class="about__content" data-reveal>
-        <p class="about__prose">I build tools for game developers — systems that bridge engine internals with production realities in Unreal and Unity. I care about correctness under pressure: code that performs reliably whether running in a game loop or a build pipeline. Currently focused on cross-engine tooling and backend infrastructure for game projects.</p>
+        <p class="about__prose">Game programmer with 4+ years of industry experience, specialising in developer tooling, AI systems, and pipeline automation within Unreal Engine. Proven track record across commercial titles — from co-op platformers to simulation and stealth/action games — with a consistent focus on empowering teams through robust, scalable tooling and clean C++ architecture.</p>
         <dl class="about__stack">
           <div class="about__stack-group">
             <dt>Languages</dt>
@@ -81,7 +81,7 @@
                 <li><span class="pill">C++</span></li>
                 <li><span class="pill">C#</span></li>
                 <li><span class="pill">Python</span></li>
-                <li><span class="pill">JavaScript</span></li>
+                <li><span class="pill">HLSL</span></li>
               </ul>
             </dd>
           </div>
@@ -99,8 +99,9 @@
             <dd>
               <ul class="about__pills">
                 <li><span class="pill">Git</span></li>
-                <li><span class="pill">Rider</span></li>
-                <li><span class="pill">VS Code</span></li>
+                <li><span class="pill">Perforce</span></li>
+                <li><span class="pill">TeamCity</span></li>
+                <li><span class="pill">JetBrains Suite</span></li>
               </ul>
             </dd>
           </div>
@@ -110,31 +111,53 @@
 
     <section id="timeline" aria-label="Work experience">
       <h2 data-reveal>Experience</h2>
-      <!-- PLACEHOLDER TIMELINE: Replace the entries below with real CV data before shipping.
-           Keep reverse-chronological order (newest entry first).
-           Format: year range, company name, role title, 2-3 outcome-framed bullets. -->
       <ol class="timeline" data-reveal>
         <li class="timeline__entry">
           <div class="timeline__meta">
-            <span class="timeline__year">2023 – present</span>
-            <span class="timeline__company">Studio Name (Placeholder)</span>
-            <span class="timeline__role">Software Developer</span>
+            <span class="timeline__year">May 2025 – present</span>
+            <span class="timeline__company">Grip Studios</span>
+            <span class="timeline__role">AI Programmer · Remote, Italy</span>
           </div>
           <ul class="timeline__bullets">
-            <li>Shipped a cross-engine save system adopted by two studios within 3 months — reduced per-project persistence boilerplate by 70%.</li>
-            <li>Built a Blueprint diff tool that cut merge conflict review time from hours to minutes for a 6-person team.</li>
-            <li>Maintained a CI pipeline for Unreal Engine plugin validation across 4 engine versions with zero flaky failures.</li>
+            <li>Contributing to core AI systems on an unannounced simulation title.</li>
+            <li>Full ownership of Behavior Tree design, implementation, and project integration.</li>
+            <li>Architected scalable solutions for large-scale Mass AI populations within Unreal Engine.</li>
           </ul>
         </li>
         <li class="timeline__entry">
           <div class="timeline__meta">
-            <span class="timeline__year">2021 – 2023</span>
-            <span class="timeline__company">Previous Studio (Placeholder)</span>
-            <span class="timeline__role">Junior Developer</span>
+            <span class="timeline__year">May 2023 – Sep 2024</span>
+            <span class="timeline__company">Stormind Games</span>
+            <span class="timeline__role">Generalist Programmer · Remote, Italy</span>
           </div>
           <ul class="timeline__bullets">
-            <li>Shipped gameplay tag tooling for a title with 400+ registered tags — reduced audit time by 80%.</li>
-            <li>Ported two Unreal Engine editor extensions to Unity, expanding reach to a second engine's asset store.</li>
+            <li>Developed AI and gameplay features including Behavior Trees and reusable utility libraries on an unannounced horror title.</li>
+            <li>Built in-engine tooling to streamline designer and artist workflows.</li>
+            <li>Implemented GAS-based gameplay features and UE 5.2+ plugin tooling on an unannounced stealth/action game.</li>
+          </ul>
+        </li>
+        <li class="timeline__entry">
+          <div class="timeline__meta">
+            <span class="timeline__year">Jan 2022 – Apr 2023</span>
+            <span class="timeline__company">Untold Games</span>
+            <span class="timeline__role">Tools &amp; Generalist Developer · Genoa, Italy</span>
+          </div>
+          <ul class="timeline__bullets">
+            <li>Built custom Unreal Engine editors (C++ &amp; Blueprints) for project-specific classes in City 20 (Steam).</li>
+            <li>Automated the full UE build pipeline using TeamCity and Python scripts covering build, test, and deployment stages.</li>
+            <li>Authored Gauntlet Framework test suites covering multiplayer, UI, gameplay, performance, and Blueprints validation.</li>
+            <li>Tool Programmer on the Nintendo Switch port of It Takes Two; contributed to the build system for Assetto Corsa Competizione (XSX &amp; PS5).</li>
+          </ul>
+        </li>
+        <li class="timeline__entry">
+          <div class="timeline__meta">
+            <span class="timeline__year">Nov 2018 – Sep 2021</span>
+            <span class="timeline__company">TheSign Academy</span>
+            <span class="timeline__role">Graduation in Game Programming · Florence, Italy</span>
+          </div>
+          <ul class="timeline__bullets">
+            <li>Coursework: C#, C++, HLSL shader programming, Unity &amp; Unreal Engine.</li>
+            <li>Final grade: 29/30.</li>
           </ul>
         </li>
       </ol>
@@ -145,7 +168,7 @@
       <p data-reveal>Available for freelance projects and full-time roles. Reach out directly.</p>
       <div class="contact__actions" data-reveal>
         <a href="mailto:riccardocorsi.developer@gmail.com" class="btn btn--primary">Email</a>
-        <a href="https://linkedin.com/in/riccardocorsi" class="btn btn--outline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://linkedin.com/in/riccardocorsidev" class="btn btn--outline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </section>
   </main>
