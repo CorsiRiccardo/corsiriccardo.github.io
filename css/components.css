@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: space-between;
     padding-inline: var(--space-lg);
+    border-bottom: 1px solid rgba(44, 36, 22, 0.10);
     border-bottom: 1px solid color-mix(in srgb, var(--color-text-primary) 10%, transparent);
   }
 
@@ -100,6 +101,7 @@
       flex-direction: column;
       gap: 0;
       padding-block: var(--space-sm);
+      border-bottom: 1px solid rgba(44, 36, 22, 0.10);
       border-bottom: 1px solid color-mix(in srgb, var(--color-text-primary) 10%, transparent);
       /* Ensure mobile menu renders above texture overlay */
       z-index: calc(var(--z-nav) - 1);
@@ -118,8 +120,20 @@
 
     .nav-link--active {
       color: var(--color-accent);
+      background-color: rgba(139, 105, 20, 0.08);
       background-color: color-mix(in srgb, var(--color-accent) 8%, transparent);
       border-bottom: none;
+    }
+  }
+
+  /* Reduced-motion: remove nav and skip-link transitions */
+  @media (prefers-reduced-motion: reduce) {
+    .skip-link {
+      transition: none;
+    }
+
+    .nav-link {
+      transition: none;
     }
   }
 

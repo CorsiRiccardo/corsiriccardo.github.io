@@ -11,10 +11,13 @@ function buildPill(label) {
   return span;
 }
 
+const SAFE_URL_PREFIXES = ['https://', 'http://', 'mailto:'];
+
 function buildActions(links) {
   const actions = document.createElement('div');
   actions.className = 'project-card__actions';
   links.forEach((link) => {
+    if (!SAFE_URL_PREFIXES.some((prefix) => link.url.startsWith(prefix))) return;
     const a = document.createElement('a');
     a.href = link.url;
     a.textContent = link.label;
