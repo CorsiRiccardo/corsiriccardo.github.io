@@ -11,7 +11,7 @@ run quality checks, and verify the live GitHub Pages deployment.
 
 - [x] **Phase 1: Foundation & Shell** - Establish design tokens, typography, paper texture, and the semantic HTML skeleton before any content is written
 - [x] **Phase 2: Core Content** - Build every visible section (hero, projects, about, timeline, contact) against the validated foundation
-- [ ] **Phase 3: Polish & Ship** - Add scroll reveal and hover animations, audit performance, and verify the live deployment
+- [x] **Phase 3: Polish & Ship** - Add scroll reveal and hover animations, audit performance, and verify the live deployment
 
 ## Phase Details
 
@@ -54,8 +54,8 @@ Plans:
   3. Lighthouse on the live `corsiriccardo.github.io` URL scores Performance >= 90 with LCP < 1.5 s, CLS = 0, and TBT = 0; the page is fully readable on a physical mobile device at 375 px width
 **Plans**: 2 plans
 Plans:
-- [ ] 03-01-PLAN.md — Scroll reveal CSS + JS module + data-reveal attributes (ANIM-01, ANIM-02)
-- [ ] 03-02-PLAN.md — Deploy to GitHub Pages, Lighthouse Mobile audit, mobile 375px verification (ANIM-03)
+- [x] 03-01-PLAN.md — Scroll reveal CSS + JS module + data-reveal attributes (ANIM-01, ANIM-02)
+- [x] 03-02-PLAN.md — Deploy to GitHub Pages, Lighthouse Mobile audit, mobile 375px verification (ANIM-03)
 **UI hint**: yes
 
 ## Progress
@@ -64,4 +64,4 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Foundation & Shell | 4/4 | Complete | 2026-04-21 |
 | 2. Core Content | 5/5 | Complete | 2026-04-22 |
-| 3. Polish & Ship | 0/2 | Not started | - |
+| 3. Polish & Ship | 2/2 | Complete | 2026-04-22 |

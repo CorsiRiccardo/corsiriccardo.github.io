@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-04-21)
 
 **Core value:** A visitor understands who Riccardo is as a developer and what he has built within 10 seconds of landing.
-**Current focus:** Phase 2 — Core Content
+**Current focus:** Project complete — all 3 phases shipped
 
 ## Current Position
 
-Phase: 3 of 3 (Polish & Ship)
-Plan: 0 of ? in current phase
-Status: Phase 2 complete — ready to plan Phase 3
-Last activity: 2026-04-22 — Phase 2 executed and verified (5 plans, all sections live, human UAT approved)
+Phase: 3 of 3 (Polish & Ship) — COMPLETE
+Plan: 2 of 2
+Status: All phases complete — project shipped
+Last activity: 2026-04-22 — Phase 3 complete (scroll reveal, hover transitions, Lighthouse 97, LCP 1.4s, CLS 0, TBT 0)
 
-Progress: [██████░░░░] 66%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -68,5 +68,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-22
-Stopped at: Phase 2 planning complete; ready to execute 02-01 → 02-02/03/04/05
-Resume file: .planning/phases/02-core-content/02-01-PLAN.md
+Stopped at: Project complete — all 3 phases shipped to https://corsiriccardo.github.io
+Resume file: n/a
