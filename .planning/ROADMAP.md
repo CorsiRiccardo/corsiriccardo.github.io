@@ -10,7 +10,7 @@ run quality checks, and verify the live GitHub Pages deployment.
 ## Phases
 
 - [x] **Phase 1: Foundation & Shell** - Establish design tokens, typography, paper texture, and the semantic HTML skeleton before any content is written
-- [ ] **Phase 2: Core Content** - Build every visible section (hero, projects, about, timeline, contact) against the validated foundation
+- [x] **Phase 2: Core Content** - Build every visible section (hero, projects, about, timeline, contact) against the validated foundation
 - [ ] **Phase 3: Polish & Ship** - Add scroll reveal and hover animations, audit performance, and verify the live deployment
 
 ## Phase Details
@@ -60,5 +60,5 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Shell | 4/4 | Complete | 2026-04-21 |
-| 2. Core Content | 0/? | Not started | - |
+| 2. Core Content | 5/5 | Complete | 2026-04-22 |
 | 3. Polish & Ship | 0/? | Not started | - |
