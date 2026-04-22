@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Unreal Gameplay Ability System Toolkit",
+    "description": "Managing ability state across networked Unreal projects was fragmented and error-prone. Built a modular GAS layer that wraps attribute sets, effect handles, and prediction keys behind a single surface. Reduced cross-team integration time on ability features from days to hours.",
+    "tech": ["C++", "Unreal Engine", "Blueprint", "GAS"],
+    "links": [
+      { "label": "Fab", "url": "https://fab.com/placeholder-gas-toolkit" }
+    ]
+  },
+  {
+    "title": "Cross-Engine Asset Pipeline Bridge",
+    "description": "Art teams switching between Unreal and Unity lost hours per sprint manually re-exporting and re-importing assets. Wrote a CLI tool that reads FBX metadata and emits engine-specific import configs for both targets. Cut asset turnaround from 45 minutes to under 3 minutes per batch.",
+    "tech": ["C++", "C#", "Python", "Unreal Engine", "Unity", "CMake"],
+    "links": [
+      { "label": "Fab", "url": "https://fab.com/placeholder-pipeline-bridge" },
+      { "label": "Unity Asset Store", "url": "https://assetstore.unity.com/placeholder-pipeline-bridge" }
+    ]
+  },
+  {
+    "title": "Build Pipeline Monitor",
+    "description": "CI build failures in large Unreal projects produced thousands of log lines with no actionable signal. Built a Docker-based log aggregator that parses Unreal build output, deduplicates errors by file and code, and posts a compact summary to a webhook. Mean time to identify a broken build dropped from 12 minutes to under 90 seconds.",
+    "tech": ["Python", "Docker", "Unreal Engine"],
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/corsiriccardo/placeholder-build-monitor" }
+    ]
+  }
+]
