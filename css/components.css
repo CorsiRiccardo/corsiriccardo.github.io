@@ -421,4 +421,142 @@
     left: 0;
     color: var(--color-text-secondary);
   }
+
+  /* ===== Phase 2: Contact ===== */
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #contact h2 {
+    margin-bottom: var(--space-lg);
+  }
+
+  #contact > p {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--space-xl);
+  }
+
+  /* CTA row: stacks vertically on mobile, row at 480px+ */
+  .contact__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  @media (min-width: 480px) {
+    .contact__actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  /* ===== Phase 2: Footer ===== */
+  footer {
+    text-align: center;
+  }
+
+  .footer__copy {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-label);
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* ===== Phase 2: Project Cards ===== */
+  #projects h2 {
+    margin-bottom: var(--space-xl);
+  }
+
+  /* Responsive grid: 1 col mobile → 2 col at 768px → 3 col at 1024px */
+  .projects__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 768px) {
+    .projects__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .projects__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+
+  /* Card container: flex column so margin-top: auto on actions works */
+  .project-card {
+    background-color: var(--color-bg-secondary);
+    /* rgba() fallback before color-mix() */
+    border: 1px solid rgba(44, 36, 22, 0.12);
+    border: 1px solid color-mix(in srgb, var(--color-text-primary) 12%, transparent);
+    border-radius: 2px;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  /* h3 needs explicit declaration — base.css only covers h2 */
+  .project-card h3 {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-heading);
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .project-card__copy {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    color: var(--color-text-primary);
+    margin: 0;
+    flex-grow: 1; /* expands to fill available space, keeping actions pinned to card bottom */
+  }
+
+  /* Pills row: reuses .pill from Plan 03 (About CSS) — do not redeclare .pill here */
+  .project-card__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  /* Actions row: margin-top auto pushes to card bottom (requires flex-direction:column on parent) */
+  .project-card__actions {
+    margin-top: auto;
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  /* Equal-width buttons when a card has 2 marketplace links */
+  .project-card__actions .btn--outline {
+    flex: 1;
+  }
+
+  /* Error state: rendered by js/projects.js on fetch failure */
+  .projects__error {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin: 0;
+  }
 }
