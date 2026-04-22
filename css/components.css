@@ -122,4 +122,101 @@
       border-bottom: none;
     }
   }
+
+  /* ===== Phase 2: Hero ===== */
+  /* ID selector beats layout.css section { min-height: 200px } across the layer boundary */
+  #hero {
+    min-height: calc(100vh - var(--nav-height));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Individual margins handle the stack spacing — no gap on the flex parent */
+  }
+
+  #hero h1 {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-tight);
+    color: var(--color-text-primary);
+    max-width: 640px;
+    margin: 0;
+  }
+
+  .hero__subtitle {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-heading);
+    color: var(--color-text-secondary);
+    margin: var(--space-sm) 0 0;
+  }
+
+  .hero__tagline {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    color: var(--color-text-secondary);
+    max-width: 480px;
+    margin: var(--space-md) 0 0;
+  }
+
+  /* ===== Phase 2: Buttons ===== */
+  /* Shared base — used by .btn--primary (hero CTA, email) and .btn--outline (LinkedIn, marketplace) */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: 1;
+    text-decoration: none;
+    padding: var(--space-md) var(--space-xl);
+    min-height: 44px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: opacity 200ms ease, transform 200ms ease, background-color 200ms ease;
+  }
+
+  /* Accent fill — hero CTA and contact Email button */
+  .btn--primary {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    border-color: var(--color-accent);
+    margin-top: var(--space-xl);
+  }
+
+  .btn--primary:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+
+  /* Outlined — LinkedIn CTA and marketplace buttons */
+  .btn--outline {
+    background-color: transparent;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .btn--outline:hover {
+    /* rgba() fallback before color-mix() */
+    background-color: rgba(139, 105, 20, 0.10);
+    background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  }
+
+  /* Reduced-motion: remove button transitions and transform */
+  @media (prefers-reduced-motion: reduce) {
+    .btn {
+      transition: none;
+    }
+
+    .btn--primary:hover {
+      transform: none;
+    }
+  }
 }
