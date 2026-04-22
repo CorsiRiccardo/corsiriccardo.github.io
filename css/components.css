@@ -314,4 +314,111 @@
     padding: 0;
     margin: 0;
   }
+
+  /* ===== Phase 2: Timeline ===== */
+  #timeline h2 {
+    margin-bottom: var(--space-xl);
+  }
+
+  /* Outer list: left padding creates the gutter for the accent line and dots */
+  .timeline {
+    position: relative;
+    padding-left: var(--space-xl); /* 32px gutter */
+    list-style: none;
+    margin: 0;
+    padding-right: 0;
+  }
+
+  /* Vertical accent line — runs the full height of .timeline */
+  .timeline::before {
+    content: ''; /* required — pseudo-element does not render without this */
+    position: absolute;
+    left: 10px; /* intentional off-grid: centers the 2px line at ~11px from section edge */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-accent);
+  }
+
+  .timeline__entry {
+    position: relative;
+    padding-bottom: var(--space-2xl); /* 48px between entries */
+  }
+
+  /* Last entry: no bottom padding — prevents double spacing against section padding */
+  .timeline__entry:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Accent dot — sits on the vertical line at the start of each entry */
+  .timeline__entry::before {
+    content: ''; /* required — pseudo-element does not render without this */
+    position: absolute;
+    left: calc(-1 * var(--space-xl) + 4px); /* = -28px from entry left = 4px from section left */
+    top: 6px; /* vertically aligns with the first line of .timeline__company text */
+    width: 12px; /* intentional off-grid: decorative dot diameter */
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-bg-dominant); /* knockout halo separates dot from the accent line */
+  }
+
+  /* Meta block: year, company, role stacked vertically */
+  .timeline__meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
+  }
+
+  .timeline__year {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-label);
+    color: var(--color-text-secondary);
+  }
+
+  .timeline__company {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-body);
+    color: var(--color-text-primary);
+  }
+
+  .timeline__role {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    color: var(--color-text-primary);
+  }
+
+  /* Bullet list: custom dash via ::before, no default list markers */
+  .timeline__bullets {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-sm) 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .timeline__bullets li {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    color: var(--color-text-primary);
+    padding-left: var(--space-lg);
+    position: relative;
+  }
+
+  .timeline__bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-text-secondary);
+  }
 }
