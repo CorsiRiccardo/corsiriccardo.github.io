@@ -202,6 +202,9 @@
     background-color: var(--color-accent);
     color: #ffffff;
     border-color: var(--color-accent);
+  }
+
+  #hero .btn--primary {
     margin-top: var(--space-xl);
   }
 
