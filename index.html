@@ -63,15 +63,15 @@
     </section>
 
     <section id="projects" aria-label="Projects">
-      <h2>Projects</h2>
-      <div class="projects__grid">
+      <h2 data-reveal>Projects</h2>
+      <div class="projects__grid" data-reveal>
         <!-- js/projects.js injects .project-card elements here at page load -->
       </div>
     </section>
 
     <section id="about" aria-label="About">
-      <h2>About</h2>
-      <div class="about__content">
+      <h2 data-reveal>About</h2>
+      <div class="about__content" data-reveal>
         <p class="about__prose">I build tools for game developers — systems that bridge engine internals with production realities in Unreal and Unity. I care about correctness under pressure: code that performs reliably whether running in a game loop or a build pipeline. Currently focused on cross-engine tooling and backend infrastructure for game projects.</p>
         <dl class="about__stack">
           <div class="about__stack-group">
@@ -109,11 +109,11 @@
     </section>
 
     <section id="timeline" aria-label="Work experience">
-      <h2>Experience</h2>
+      <h2 data-reveal>Experience</h2>
       <!-- PLACEHOLDER TIMELINE: Replace the entries below with real CV data before shipping.
            Keep reverse-chronological order (newest entry first).
            Format: year range, company name, role title, 2-3 outcome-framed bullets. -->
-      <ol class="timeline">
+      <ol class="timeline" data-reveal>
         <li class="timeline__entry">
           <div class="timeline__meta">
             <span class="timeline__year">2023 – present</span>
@@ -141,9 +141,9 @@
     </section>
 
     <section id="contact" aria-label="Contact">
-      <h2>Contact</h2>
-      <p>Available for freelance projects and full-time roles. Reach out directly.</p>
-      <div class="contact__actions">
+      <h2 data-reveal>Contact</h2>
+      <p data-reveal>Available for freelance projects and full-time roles. Reach out directly.</p>
+      <div class="contact__actions" data-reveal>
         <a href="mailto:riccardocorsi.developer@gmail.com" class="btn btn--primary">Email</a>
         <a href="https://linkedin.com/in/riccardocorsi" class="btn btn--outline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
@@ -158,5 +158,6 @@
        but module semantics apply: deferred execution, strict mode, no global leak) -->
   <script type="module" src="js/nav.js"></script>
   <script type="module" src="js/projects.js"></script>
+  <script type="module" src="js/reveal.js"></script>
 </body>
 </html>
