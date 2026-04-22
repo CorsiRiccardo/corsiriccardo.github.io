@@ -1,7 +1,52 @@
 @layer animations {
-  /* Phase 3 — scroll reveal and hover transitions go here */
 
+  /* === Scroll reveal: initial hidden state === */
+  /* JS (reveal.js) adds .is-visible when element enters viewport.        */
+  /* translateY(24px) gives editorial downward-drift effect on entry.     */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 500ms ease, transform 500ms ease;
+  }
+
+  /* === Scroll reveal: visible state (class added by js/reveal.js) === */
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* === Project card hover: editorial lift without layout shift === */
+  /* transition goes on the base element (not :hover) so it applies on     */
+  /* both mouse-enter and mouse-leave for smooth bidirectional easing.     */
+  /* box-shadow is NOT a layout property — does not cause reflow or CLS.  */
+  .project-card {
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-2px);
+    /* rgba(44, 36, 22, 0.12) = --color-text-primary (#2C2416) at 12% opacity */
+    box-shadow: 0 4px 16px rgba(44, 36, 22, 0.12);
+  }
+
+  /* === Reduced-motion overrides — MUST appear after rules above to win cascade === */
+  /* [data-reveal] opacity: 1 + transform: none ensures content is NEVER invisible  */
+  /* if reveal.js returns early (prefers-reduced-motion true). Both layers needed:   */
+  /* CSS restores visibility; JS skips IO entirely.                                  */
   @media (prefers-reduced-motion: reduce) {
-    /* All animation overrides go here in Phase 3 */
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .project-card {
+      transition: none;
+    }
+
+    .project-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
   }
 }
