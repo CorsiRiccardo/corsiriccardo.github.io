@@ -52,7 +52,10 @@ Plans:
   1. Content sections animate in on scroll (opacity + translateY) and the animation fires only once per element; disabling animations in OS accessibility settings removes all motion
   2. Hovering project cards and interactive links produces a subtle CSS transition (no JS, no layout shift)
   3. Lighthouse on the live `corsiriccardo.github.io` URL scores Performance >= 90 with LCP < 1.5 s, CLS = 0, and TBT = 0; the page is fully readable on a physical mobile device at 375 px width
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — Scroll reveal CSS + JS module + data-reveal attributes (ANIM-01, ANIM-02)
+- [ ] 03-02-PLAN.md — Deploy to GitHub Pages, Lighthouse Mobile audit, mobile 375px verification (ANIM-03)
 **UI hint**: yes
 
 ## Progress
@@ -61,4 +64,4 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Foundation & Shell | 4/4 | Complete | 2026-04-21 |
 | 2. Core Content | 5/5 | Complete | 2026-04-22 |
-| 3. Polish & Ship | 0/? | Not started | - |
+| 3. Polish & Ship | 0/2 | Not started | - |
