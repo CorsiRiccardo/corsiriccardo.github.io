@@ -573,4 +573,16 @@
     text-align: center;
     margin: 0;
   }
+
+  /* Work-in-progress banner replacing the projects grid */
+  .projects__wip {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text-secondary);
+    border: 1px solid color-mix(in srgb, var(--color-text-primary) 12%, transparent);
+    border-radius: 2px;
+    padding: var(--space-xl) var(--space-lg);
+    text-align: center;
+    margin: 0;
+  }
 }
