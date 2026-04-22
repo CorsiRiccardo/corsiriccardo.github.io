@@ -63,7 +63,10 @@
     </section>
 
     <section id="projects" aria-label="Projects">
-      <!-- Phase 2 content: project cards loaded from data/projects.json -->
+      <h2>Projects</h2>
+      <div class="projects__grid">
+        <!-- js/projects.js injects .project-card elements here at page load -->
+      </div>
     </section>
 
     <section id="about" aria-label="About">
@@ -138,12 +141,17 @@
     </section>
 
     <section id="contact" aria-label="Contact">
-      <!-- Phase 2 content: email and LinkedIn CTAs -->
+      <h2>Contact</h2>
+      <p>Available for freelance projects and full-time roles. Reach out directly.</p>
+      <div class="contact__actions">
+        <a href="mailto:riccardocorsi.developer@gmail.com" class="btn btn--primary">Email</a>
+        <a href="https://linkedin.com/in/riccardocorsi" class="btn btn--outline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <!-- Phase 2 content: footer copy -->
+    <p class="footer__copy">© 2026 Riccardo Corsi</p>
   </footer>
 
   <!-- nav.js must be type="module" — uses ES module syntax (import/export not used here
