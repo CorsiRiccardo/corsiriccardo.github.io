@@ -59,6 +59,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  strong {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+  }
+
   a {
     color: inherit;
     text-decoration: underline;
