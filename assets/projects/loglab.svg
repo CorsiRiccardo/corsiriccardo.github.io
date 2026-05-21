@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">LogLab project thumbnail</title>
+  <desc id="desc">Stylised developer console with grouped log rows.</desc>
+  <rect width="320" height="180" rx="18" fill="#efe3c7"/>
+  <rect x="28" y="28" width="264" height="124" rx="10" fill="#2c2416" opacity="0.92"/>
+  <circle cx="48" cy="48" r="5" fill="#c75b4b"/>
+  <circle cx="66" cy="48" r="5" fill="#d6a84f"/>
+  <circle cx="84" cy="48" r="5" fill="#7ca66a"/>
+  <rect x="48" y="72" width="72" height="10" rx="5" fill="#e8d7b3" opacity="0.95"/>
+  <rect x="132" y="72" width="112" height="10" rx="5" fill="#e8d7b3" opacity="0.55"/>
+  <rect x="48" y="94" width="42" height="10" rx="5" fill="#d6a84f"/>
+  <rect x="102" y="94" width="150" height="10" rx="5" fill="#e8d7b3" opacity="0.6"/>
+  <rect x="48" y="116" width="52" height="10" rx="5" fill="#c75b4b"/>
+  <rect x="112" y="116" width="126" height="10" rx="5" fill="#e8d7b3" opacity="0.6"/>
+  <path d="M226 42l22 22-22 22M202 86l22-44" stroke="#efe3c7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+</svg>

@@ -529,6 +529,16 @@
     gap: var(--space-md);
   }
 
+  .project-card__image {
+    width: 100%;
+    max-height: 132px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid rgba(44, 36, 22, 0.12);
+    border: 1px solid color-mix(in srgb, var(--color-text-primary) 12%, transparent);
+    background-color: var(--color-bg-primary);
+  }
+
   /* h3 needs explicit declaration — base.css only covers h2 */
   .project-card h3 {
     font-family: var(--font-family-display);

@@ -33,6 +33,22 @@ function buildCard(project) {
   const card = document.createElement('article');
   card.className = 'project-card';
 
+  if (project.image?.src) {
+    const isSafeImage =
+      SAFE_URL_PREFIXES.some((prefix) => project.image.src.startsWith(prefix)) ||
+      project.image.src.startsWith('assets/');
+
+    if (isSafeImage) {
+      const img = document.createElement('img');
+      img.className = 'project-card__image';
+      img.src = project.image.src;
+      img.alt = project.image.alt || '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      card.appendChild(img);
+    }
+  }
+
   const h3 = document.createElement('h3');
   h3.textContent = project.title;
   card.appendChild(h3);

@@ -2,17 +2,25 @@
   {
     "title": "LogLab — Unreal & Unity Logging Tools",
     "description": "Editor-focused logging and diagnostics toolkit for game teams. The Unreal Engine version is live on Fab; the Unity package is nearly ready, bringing the same fast log filtering, warning/error grouping, and developer-friendly console workflow to Unity projects.",
+    "image": {
+      "src": "assets/projects/loglab.svg",
+      "alt": "Stylised developer console representing LogLab diagnostics"
+    },
     "tech": ["C++", "Unreal Engine", "Unity", "Editor Tools", "Diagnostics"],
     "links": [
       {
         "label": "View Unreal version on Fab",
-        "url": "https://www.fab.com/listings/5855bd92-2335-4e29-a26b-c6c1f2137940"
+        "url": "https://fab.com/s/494a5f86513a"
       }
     ]
   },
   {
     "title": "Unreal Health Dashboard",
     "description": "Operational dashboard for Unreal Engine projects that turns build, automation, test, and editor health signals into a readable project status view. Designed to help teams spot regressions, understand pipeline health, and prioritise fixes without digging through scattered logs.",
+    "image": {
+      "src": "assets/projects/unreal-health-dashboard.svg",
+      "alt": "Stylised dashboard representing Unreal project health metrics"
+    },
     "tech": ["Unreal Engine", "Automation", "CI/CD", "Observability", "Developer Tools"],
     "links": []
   }
