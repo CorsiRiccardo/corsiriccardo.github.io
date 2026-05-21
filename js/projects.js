@@ -80,7 +80,7 @@ async function loadProjects() {
   }
 
   try {
-    const res = await fetch('data/projects.json');
+    const res = await fetch('data/projects.json?v=20260521-project-images', { cache: 'no-store' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const projects = await res.json();
 
