@@ -1,20 +1,19 @@
 [
   {
-    "title": "City 20 — Custom Editor Tooling",
-    "description": "Large-scale city-sim games generate project-specific data types that generic Unreal editors can't handle cleanly. Built custom UE editors in C++ and Blueprints for City 20's project-specific classes, then automated the full UE build pipeline with TeamCity and Python scripts covering build, test, and deployment stages. Also authored Gauntlet Framework test suites for multiplayer, UI, gameplay, and performance validation.",
-    "tech": ["C++", "Blueprints", "Python", "TeamCity", "Unreal Engine"],
-    "links": []
+    "title": "LogLab — Unreal & Unity Logging Tools",
+    "description": "Editor-focused logging and diagnostics toolkit for game teams. The Unreal Engine version is live on Fab; the Unity package is nearly ready, bringing the same fast log filtering, warning/error grouping, and developer-friendly console workflow to Unity projects.",
+    "tech": ["C++", "Unreal Engine", "Unity", "Editor Tools", "Diagnostics"],
+    "links": [
+      {
+        "label": "View Unreal version on Fab",
+        "url": "https://www.fab.com/listings/5855bd92-2335-4e29-a26b-c6c1f2137940"
+      }
+    ]
   },
   {
-    "title": "It Takes Two — Nintendo Switch Port",
-    "description": "Hazelight's co-op platformer needed a reliable Nintendo Switch port without disrupting existing platform builds. Contributed as Tool & Generalist Programmer on the port, adapting tooling and build systems to meet Switch hardware and certification requirements alongside the core team at Untold Games.",
-    "tech": ["C++", "Unreal Engine", "Nintendo Switch"],
-    "links": []
-  },
-  {
-    "title": "Assetto Corsa Competizione — XSX & PS5",
-    "description": "Porting a high-fidelity racing simulation to next-gen consoles requires a build system that handles platform-specific certification requirements without regression on existing targets. Contributed to the XSX and PS5 build system at Untold Games, enabling reliable console builds as part of the commercial release.",
-    "tech": ["C++", "Unreal Engine", "Xbox Series X", "PS5"],
+    "title": "Unreal Health Dashboard",
+    "description": "Operational dashboard for Unreal Engine projects that turns build, automation, test, and editor health signals into a readable project status view. Designed to help teams spot regressions, understand pipeline health, and prioritise fixes without digging through scattered logs.",
+    "tech": ["Unreal Engine", "Automation", "CI/CD", "Observability", "Developer Tools"],
     "links": []
   }
 ]
