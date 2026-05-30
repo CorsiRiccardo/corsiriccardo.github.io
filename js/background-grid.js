@@ -9,11 +9,11 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 if (canvas) {
   const ctx = canvas.getContext('2d');
   const gridSize = 28;
-  const influenceRadius = 220;
+  const influenceRadius = 180;
   const baseOpacity = 0.055;
-  const glowOpacity = 0.48;
+  const glowOpacity = 0.26;
   const baseSize = 1;
-  const glowSize = 1.65;
+  const glowSize = 0.85;
   const dotColor = '139, 105, 20'; // --color-accent (#8B6914), warmer and more visible on paper
 
   let width = 0;
