@@ -8,12 +8,12 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 if (canvas) {
   const ctx = canvas.getContext('2d');
   const gridSize = 28;
-  const influenceRadius = 150;
+  const influenceRadius = 220;
   const baseOpacity = 0.055;
-  const glowOpacity = 0.20;
+  const glowOpacity = 0.48;
   const baseSize = 1;
-  const glowSize = 0.7;
-  const dotColor = '44, 36, 22'; // --color-text-primary (#2C2416)
+  const glowSize = 1.65;
+  const dotColor = '139, 105, 20'; // --color-accent (#8B6914), warmer and more visible on paper
 
   let width = 0;
   let height = 0;
@@ -73,15 +73,14 @@ if (canvas) {
   window.addEventListener('scroll', requestDraw, { passive: true });
 
   if (!reducedMotion) {
-    window.addEventListener(
-      'pointermove',
-      (event) => {
-        pointerX = event.clientX;
-        pointerY = event.clientY;
-        requestDraw();
-      },
-      { passive: true }
-    );
+    const updatePointer = (event) => {
+      pointerX = event.clientX;
+      pointerY = event.clientY;
+      requestDraw();
+    };
+
+    window.addEventListener('pointermove', updatePointer, { passive: true });
+    window.addEventListener('mousemove', updatePointer, { passive: true });
 
     window.addEventListener('pointerleave', () => {
       pointerX = -1000;
