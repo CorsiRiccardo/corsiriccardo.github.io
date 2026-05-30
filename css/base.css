@@ -99,6 +99,15 @@
     z-index: 1;
   }
 
+  main :where(h1, h2, h3, p, li, dt, dd, span, strong, a),
+  footer :where(p, span, a) {
+    position: relative;
+    z-index: 1;
+    text-shadow:
+      0 0 10px var(--color-bg-dominant),
+      0 0 18px var(--color-bg-dominant);
+  }
+
   strong {
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-primary);
