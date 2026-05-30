@@ -2,6 +2,7 @@
 // Pointer-reactive dotted background inspired by Spacesuit.
 // Canvas-only, no layout work in the animation loop.
 
+const gridLayer = document.querySelector('.interactive-grid');
 const canvas = document.getElementById('interactiveGridCanvas');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -57,7 +58,7 @@ if (canvas) {
         const dx = x - pointerX;
         const dy = y - pointerY;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const intensity = reducedMotion ? 0 : Math.max(0, 1 - distance / influenceRadius);
+        const intensity = Math.max(0, 1 - distance / influenceRadius);
         const opacity = baseOpacity + intensity * glowOpacity;
         const size = baseSize + intensity * glowSize;
 
@@ -72,22 +73,32 @@ if (canvas) {
   window.addEventListener('resize', resize, { passive: true });
   window.addEventListener('scroll', requestDraw, { passive: true });
 
-  if (!reducedMotion) {
-    const updatePointer = (event) => {
-      pointerX = event.clientX;
-      pointerY = event.clientY;
-      requestDraw();
-    };
+  const updatePointer = (event) => {
+    pointerX = event.clientX;
+    pointerY = event.clientY;
 
-    window.addEventListener('pointermove', updatePointer, { passive: true });
-    window.addEventListener('mousemove', updatePointer, { passive: true });
+    if (gridLayer) {
+      gridLayer.style.setProperty('--grid-x', `${pointerX}px`);
+      gridLayer.style.setProperty('--grid-y', `${pointerY}px`);
+    }
 
-    window.addEventListener('pointerleave', () => {
-      pointerX = -1000;
-      pointerY = -1000;
-      requestDraw();
-    });
-  }
+    requestDraw();
+  };
+
+  window.addEventListener('pointermove', updatePointer, { passive: true });
+  window.addEventListener('mousemove', updatePointer, { passive: true });
+
+  window.addEventListener('pointerleave', () => {
+    pointerX = -1000;
+    pointerY = -1000;
+
+    if (gridLayer) {
+      gridLayer.style.setProperty('--grid-x', '-1000px');
+      gridLayer.style.setProperty('--grid-y', '-1000px');
+    }
+
+    requestDraw();
+  });
 
   resize();
 }
